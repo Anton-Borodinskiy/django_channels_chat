@@ -31,6 +31,8 @@ AUTH_USER_MODEL = 'accounts.User'
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -70,6 +72,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_channels_chat.wsgi.application'
+ASGI_APPLICATION = 'django_channels_chat.asgi.application' # new
 
 
 # Database
