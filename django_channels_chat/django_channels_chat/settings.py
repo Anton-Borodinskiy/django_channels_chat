@@ -31,13 +31,9 @@ AUTH_USER_MODEL = 'accounts.User'
 # Application definition
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": ['redis://127.0.0.1:6379',],
-        },
-    },
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
 }
-
 
 INSTALLED_APPS = [
     'channels',
