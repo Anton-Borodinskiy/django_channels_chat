@@ -1,5 +1,4 @@
 import json
-from channels.generic.websocket import WebsocketConsumer
 from accounts.models import User
 from .models import Event, Message, Group
 from channels.generic.websocket import WebsocketConsumer, AsyncWebsocketConsumer

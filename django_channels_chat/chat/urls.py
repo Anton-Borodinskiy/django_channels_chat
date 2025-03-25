@@ -1,8 +1,7 @@
-from django.urls import re_path, path
+from django.urls import path
+from . import views
 
-from . import consumers
-
-websocket_urlpatterns = [
-    path('', consumers.JoinAndLeave.as_asgi()),
-    path('groups/<uuid:uuid>/', consumers.GroupConsumer.as_asgi())
+urlpatterns = [
+   path("", views.home_view, name="home"),
+   path("groups/<uuid:uuid>/", views.group_chat_view, name="group")
 ]
